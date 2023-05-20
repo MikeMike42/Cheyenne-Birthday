@@ -16,8 +16,7 @@ import SkipNextIcon from '@mui/icons-material/SkipNext';
 function App() {
   const theme = useTheme()
   const countToDate = new Date("2023-05-21")
-  countToDate.setHours(countToDate.getHours() -3)
-  countToDate.setMinutes(countToDate.getMinutes() - 3)
+  countToDate.setHours(countToDate.getHours() + 5)
   const [cheyenneIsThirty, setCheyenneIsThirty] = useState(countToDate < new Date())
   const [birthdayAudio, setBirthdayAudio] = useState((new Audio(audio)))
   const [isPaused, setIsPaused] = useState(true)
