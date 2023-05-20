@@ -36,8 +36,8 @@ export default function MusicSection() {
   }
 
   return (<>
-    <Typography sx={{ mt: 10, fontSize: '.7rem' }}>Alan Jackson thinks you're young...</Typography>
-    <Card sx={{ mt: 3, ml: 'auto', mr: 'auto', display: 'flex', width: 'fit-content' }}>
+    <Typography sx={{ mt: 3, fontSize: '.7rem' }}>Alan Jackson thinks you're young...</Typography>
+    <Card sx={{ mt: 1, mb: 3, ml: 'auto', mr: 'auto', display: 'flex', width: 'fit-content' }}>
       <Box sx={{ display: 'flex', flexDirection: 'column' }}>
         <CardContent sx={{ flex: '1 0 auto' }}>
           <Typography component="div" variant="h5" fontSize={'1rem'}>

@@ -9,6 +9,17 @@ export default function SolarSystem() {
   let secondsLeft = (timestamp_now - timestamp_start) / 1000;
   let root = document.documentElement;
   root.style.setProperty('--seconds-left', `${secondsLeft}s`);
+  const [matchesSmallestWidth, setMatchesSmallestWidth] = useState(
+    window.matchMedia("(max-width: 1600px)").matches
+  )
+
+  useEffect(() => {
+    window
+        .matchMedia("(max-width: 1600px)")
+        .addEventListener('change', e => {
+        setMatchesSmallestWidth(e.matches)
+      })
+  }, [])
 
   return (<>
       <div class="universe">
@@ -163,7 +174,7 @@ export default function SolarSystem() {
           </div>
       </div>
       <div style={{ width: '65vw', height: '100px', marginTop: '-3rem', position: 'absolute', zIndex: '100' }}>
-        <Typography variant="h6" style={{ fontFamily: 'Open Sans', color: 'white', textAlign: 'center' }}>
+        <Typography variant="h6" style={{ fontSize: matchesSmallestWidth ? '.7rem' : '1.2rem', fontFamily: 'Open Sans', color: 'white', textAlign: 'center' }}>
           Saturn orbits the sun roughly every 30 years!
         </Typography>
       </div>
