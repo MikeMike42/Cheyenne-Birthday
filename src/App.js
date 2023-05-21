@@ -17,7 +17,7 @@ function App() {
   const theme = useTheme()
   const countToDate = new Date("2023-05-21")
   countToDate.setHours(countToDate.getHours() + 4)
-  countToDate.setMinutes(countToDate.getMinutes() + 40)
+  countToDate.setMinutes(countToDate.getMinutes() + 45)
   const [cheyenneIsThirty, setCheyenneIsThirty] = useState(countToDate < new Date())
   const [birthdayAudio, setBirthdayAudio] = useState((new Audio(audio)))
   const [isPaused, setIsPaused] = useState(true)
